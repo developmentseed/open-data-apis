@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Open Data APIs",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
