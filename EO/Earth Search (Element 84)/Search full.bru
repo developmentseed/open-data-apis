@@ -1,0 +1,30 @@
+meta {
+  name: Search full
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/search
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "collections": ["sentinel-2-l2a"],
+    "bbox": [
+      -24.95,
+      63.38,
+      -13.99,
+      66.56
+    ],
+    "datetime": "2023-01-01T00:00:00Z/2023-12-31T23:59:59Z",
+    "limit": 10,
+      "query": {
+        "eo:cloud_cover": {
+          "lt": 30
+      }
+    }
+  }
+}
