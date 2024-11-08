@@ -1,20 +1,20 @@
 meta {
   name: Search
   type: http
-  seq: 3
+  seq: 4
 }
 
 get {
-  url: {{host}}/search?bbox=-24.95, 63.38, -13.99, 66.56&datetime=2023-01-01T00:00:00Z/2023-12-31T23:59:59Z&collections=sentinel-2-l2a&fields=id,type,-geometry,bbox,properties,-links,-assets
+  url: {{host}}/search?collections=noaa-emergency-response
   body: none
   auth: none
 }
 
 params:query {
-  bbox: -24.95, 63.38, -13.99, 66.56
-  datetime: 2023-01-01T00:00:00Z/2023-12-31T23:59:59Z
-  collections: sentinel-2-l2a
-  fields: id,type,-geometry,bbox,properties,-links,-assets
+  collections: noaa-emergency-response
+  ~bbox: -24.95, 63.38, -13.99, 66.56
+  ~datetime: 2023-01-01T00:00:00Z/2023-12-31T23:59:59Z
+  ~fields: id,type,-geometry,bbox,properties,-links,-assets
   ~intersects: 
   ~limit: 5
   ~ids: S2B_55GGL_20231231_0_L2A

@@ -1,16 +1,17 @@
 meta {
-  name: Add item
+  name: Update item
   type: http
-  seq: 4
+  seq: 5
 }
 
-post {
-  url: {{host}}/collections/:collectionId/items
+put {
+  url: {{host}}/collections/:collectionId/items/:featureId
   body: json
   auth: none
 }
 
 params:path {
+  featureId: 20200307aC0862400w361330
   collectionId: noaa-emergency-response
 }
 
@@ -62,7 +63,7 @@ body:json {
     "collection": "noaa-emergency-response",
     "properties": {
       "event": "Nashville Tornado",
-      "datetime": "2020-03-11T00:00:01Z"
+      "datetime": "2019-03-11T00:00:01Z"
     },
     "stac_version": "1.0.0",
     "stac_extensions": []

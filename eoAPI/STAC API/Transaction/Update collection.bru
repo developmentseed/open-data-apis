@@ -1,0 +1,67 @@
+meta {
+  name: Update collection
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/collections/:collectionId
+  body: json
+  auth: none
+}
+
+params:path {
+  collectionId: noaa-emergency-response
+}
+
+body:json {
+  {
+    "id": "noaa-emergency-response",
+    "links": [
+      {
+        "rel": "items",
+        "type": "application/geo+json",
+        "href": "/stac/collections/noaa-emergency-response/items"
+      },
+      {
+        "rel": "parent",
+        "type": "application/json",
+        "href": "/stac/"
+      },
+      {
+        "rel": "root",
+        "type": "application/json",
+        "href": "/stac/"
+      },
+      {
+        "rel": "self",
+        "type": "application/json",
+        "href": "/stac/collections/noaa-emergency-response"
+      }
+    ],
+    "title": "NOAA Emergency Response Imagery",
+    "extent": {
+      "spatial": {
+        "bbox": [
+          [
+            -180,
+            -90,
+            180,
+            90
+          ]
+        ]
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2005-01-01T00:00:00Z",
+            null
+          ]
+        ]
+      }
+    },
+    "license": "public-domain",
+    "description": "Updated description for testing purposes.",
+    "stac_version": "1.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Create bulk items (unofficial)
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{host}}/collections/:collection_id/bulk_items
+  body: none
+  auth: none
+}
+
+params:path {
+  collection_id: noaa-emergency-response
+}
