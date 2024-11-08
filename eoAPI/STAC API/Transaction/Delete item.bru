@@ -1,0 +1,16 @@
+meta {
+  name: Delete item
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/collections/:collectionId/items/:featureId
+  body: none
+  auth: none
+}
+
+params:path {
+  featureId: 
+  collectionId: 
+}

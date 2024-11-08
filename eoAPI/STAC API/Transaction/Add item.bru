@@ -1,0 +1,15 @@
+meta {
+  name: Add item
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/collections/:collectionId/items
+  body: none
+  auth: none
+}
+
+params:path {
+  collectionId: noaa-emergency-response
+}

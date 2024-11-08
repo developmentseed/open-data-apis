@@ -1,0 +1,19 @@
+meta {
+  name: Search full
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/search
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "collections": ["noaa-emergency-response"],
+    "datetime": "2023-01-01T00:00:00Z/2023-12-31T23:59:59Z",
+    "limit": 10
+  }
+}
